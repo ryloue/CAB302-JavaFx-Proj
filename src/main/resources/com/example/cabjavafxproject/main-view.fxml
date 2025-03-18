@@ -50,4 +50,7 @@
         <Button text="Cancel" />
         <Button text="Delete" onAction="#onDelete"/>
     </HBox>
+    <HBox spacing="10.0">
+        <Button text="New" onAction="#onAdd" maxWidth="Infinity"/>
+    </HBox>
 </VBox>
