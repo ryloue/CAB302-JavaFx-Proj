@@ -123,4 +123,15 @@ public class MainController {
         selectContact(newContact);
         firstNameTextField.requestFocus();
     }
+
+    @FXML
+    private void onCancel() {
+        // Find the selected contact
+        Contact selectedContact = contactsListView.getSelectionModel().getSelectedItem();
+        if (selectedContact != null) {
+            // Since the contact hasn't been modified,
+            // we can just re-select it to refresh the text fields
+            selectContact(selectedContact);
+        }
+    }
 }

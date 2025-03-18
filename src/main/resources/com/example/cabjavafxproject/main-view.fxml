@@ -47,7 +47,7 @@
     </HBox>
     <HBox spacing="10.0" alignment="CENTER">
         <Button text="Confirm" onAction="#onEditConfirm"/>
-        <Button text="Cancel" />
+        <Button text="Cancel" onAction="#onCancel"/>
         <Button text="Delete" onAction="#onDelete"/>
     </HBox>
     <HBox spacing="10.0">
