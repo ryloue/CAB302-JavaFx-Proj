@@ -37,6 +37,14 @@ public class MainController {
         };
     }
 
+    /**
+     * Synchronizes the contacts list view with the contacts in the database.
+     */
+    private void syncContacts() {
+        contactsListView.getItems().clear();
+        contactsListView.getItems().addAll(contactDAO.getAllContacts());
+    }
+
     @FXML
     public void initialize() {
         contactsListView.setCellFactory(this::renderCell);
