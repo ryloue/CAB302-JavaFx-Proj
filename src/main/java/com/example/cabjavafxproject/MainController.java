@@ -134,4 +134,5 @@ public class MainController {
             selectContact(selectedContact);
         }
     }
+
 }
