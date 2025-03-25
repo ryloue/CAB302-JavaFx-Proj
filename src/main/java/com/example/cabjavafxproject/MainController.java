@@ -62,6 +62,7 @@ public class MainController {
                 // If the cell is empty, set the text to null, otherwise set it to the contact's full name
                 if (empty || contact == null || contact.getFullName() == null) {
                     setText(null);
+                    super.setOnMouseClicked(this::onContactSelected);
                 } else {
                     setText(contact.getFullName());
                 }
