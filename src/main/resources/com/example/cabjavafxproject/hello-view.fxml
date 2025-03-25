@@ -26,9 +26,8 @@
 
     <HBox alignment="BOTTOM_RIGHT" spacing="10.0">
         <Button text="Cancel" />
-        <Button fx:id="nextButton" text="Next" disable="true"/>
+        <Button fx:id="nextButton" text="Next" onAction="#onNextButtonClick" disable="true"/>
     </HBox>
-
     <Label fx:id="welcomeText"/>
     <Button text="Hello!" onAction="#onHelloButtonClick"/>
 </VBox>

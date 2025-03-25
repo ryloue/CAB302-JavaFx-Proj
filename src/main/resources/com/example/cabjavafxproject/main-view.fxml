@@ -38,6 +38,7 @@
                 <TextField fx:id="emailTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                 <TextField fx:id="phoneTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             </GridPane>
+
             <HBox spacing="10.0" alignment="CENTER">
                 <Button text="Confirm" />
                 <Button text="Cancel" />
