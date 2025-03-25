@@ -40,9 +40,9 @@
             </GridPane>
 
             <HBox spacing="10.0" alignment="CENTER">
-                <Button text="Confirm" />
+                <Button text="Confirm" onAction="#onEditConfirm"/>
                 <Button text="Cancel" />
-                <Button text="Delete" />
+                <Button text="Delete" onAction="#onDelete"/>
             </HBox>
         </VBox>
     </HBox>
