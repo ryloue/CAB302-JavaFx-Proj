@@ -1,15 +1,10 @@
 package com.example.cabjavafxproject;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class HelloController {
     @FXML
@@ -20,14 +15,6 @@ public class HelloController {
     private CheckBox agreeCheckBox;
     @FXML
     private Button nextButton;
-
-    @FXML
-    protected void onNextButtonClick() throws IOException {
-        Stage stage = (Stage) nextButton.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("main-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
-        stage.setScene(scene);
-    }
 
     @FXML
     public void initialize() {
@@ -57,6 +44,4 @@ Elementum nibh tellus molestie nunc non blandit massa.""");
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to the Address Book Application!");
     }
-
-    
 }
