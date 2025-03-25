@@ -1,10 +1,16 @@
 package com.example.cabjavafxproject;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+import java.util.List;
 
 public class MainController {
     @FXML
@@ -13,7 +19,10 @@ public class MainController {
     public MainController() {
         contactDAO = new MockContactDAO();
     }
-
+    @FXML
+    private VBox contactContainer;
+    @FXML
+    private Button nextButton;
     /**
      * Programmatically selects a contact in the list view and
      * updates the text fields with the contact's information.
@@ -65,13 +74,25 @@ public class MainController {
      */
     private void syncContacts() {
         contactsListView.getItems().clear();
-        contactsListView.getItems().addAll(contactDAO.getAllContacts());
+        List<Contact> contacts = contactDAO.getAllContacts();
+        boolean hasContact = !contacts.isEmpty();
+        if (hasContact) {
+            contactsListView.getItems().addAll(contacts);
+        }
+        // Show / hide based on whether there are contacts
+        contactContainer.setVisible(hasContact);
     }
 
     @FXML
     public void initialize() {
         contactsListView.setCellFactory(this::renderCell);
-        contactsListView.getItems().addAll(contactDAO.getAllContacts());
+        syncContacts();
+        // Select the first contact and display its information
+        contactsListView.getSelectionModel().selectFirst();
+        Contact firstContact = contactsListView.getSelectionModel().getSelectedItem();
+        if (firstContact != null) {
+            selectContact(firstContact);
+        }
     }
 
     @FXML
@@ -135,4 +156,9 @@ public class MainController {
         }
     }
 
+    @FXML
+    protected void onCancelButtonClick() {
+        Stage stage = (Stage) nextButton.getScene().getWindow();
+        stage.close();
+    }
 }

@@ -57,4 +57,5 @@ Elementum nibh tellus molestie nunc non blandit massa.""");
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to the Address Book Application!");
     }
+
 }
