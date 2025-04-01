@@ -11,7 +11,7 @@ public class HelloApplication extends Application {
     public static final String TITLE = "Address Book";
     public static final int WIDTH = 640;
     public static final int HEIGHT = 360;
-    //helladofadf
+    //comment
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
@@ -23,4 +23,5 @@ public class HelloApplication extends Application {
     public static void main(String[] args) {
         launch();
     }
+
 }
