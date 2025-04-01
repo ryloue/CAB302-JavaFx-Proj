@@ -5,4 +5,6 @@ module com.example.cabjavafxproject {
 
     opens com.example.cabjavafxproject to javafx.fxml;
     exports com.example.cabjavafxproject;
+    exports com.example.cabjavafxproject.controller;
+    opens com.example.cabjavafxproject.controller to javafx.fxml;
 }
