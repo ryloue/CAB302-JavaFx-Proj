@@ -1,4 +1,4 @@
-package com.example.cabjavafxproject;
+package com.example.cabjavafxproject.model;
 
 import java.util.ArrayList;
 import java.util.List;

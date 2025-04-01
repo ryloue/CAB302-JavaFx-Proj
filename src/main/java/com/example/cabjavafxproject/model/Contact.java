@@ -1,4 +1,4 @@
-package com.example.cabjavafxproject;
+package com.example.cabjavafxproject.model;
 
 public class Contact {
     private int id;
