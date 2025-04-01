@@ -36,12 +36,12 @@
                 <TextField fx:id="lastNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                 <TextField fx:id="emailTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                 <TextField fx:id="phoneTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <rowConstraints>
-               <RowConstraints />
-               <RowConstraints />
-               <RowConstraints />
-               <RowConstraints />
-            </rowConstraints>
+                <rowConstraints>
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                </rowConstraints>
             </GridPane>
             <HBox alignment="CENTER" spacing="10.0">
                 <Button text="Confirm" onAction="#onEditConfirm"/>
